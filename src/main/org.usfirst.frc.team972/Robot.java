@@ -12,9 +12,6 @@ public class Robot extends IterativeRobot {
 	WPI_TalonSRX l2 = new WPI_TalonSRX(5);
 	WPI_TalonSRX l3 = new WPI_TalonSRX(6);
 	
-	double rightSpeed;
-	double leftSpeed;
-	
 	Joystick joy = new Joystick(0);
 
 	@Override
@@ -28,14 +25,12 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void teleopPeriodic() {
-		rightSpeed.set(joy.getRawAxis(5));
-		leftSpeed.set(joy.getRawAxis(1));
-		r1.set(ControlMode.PercentOutput, rightSpeed);
-		r2.set(ControlMode.PercentOutput, rightSpeed);
-		r3.set(ControlMode.PercentOutput, rightSpeed);
-		l1.set(ControlMode.PercentOutput, -leftSpeed);
-		l2.set(ControlMode.PercentOutput, -leftSpeed);
-		l3.set(ControlMode.PercentOutput, -leftSpeed);
+		r1.set(ControlMode.PercentOutput, joy.getRawAxis(5));
+		r2.set(ControlMode.PercentOutput, joy.getRawAxis(5));
+		r3.set(ControlMode.PercentOutput, joy.getRawAxis(5));
+		l1.set(ControlMode.PercentOutput, -joy.getRawAxis(1));
+		l2.set(ControlMode.PercentOutput, -joy.getRawAxis(1));
+		l3.set(ControlMode.PercentOutput, -joy.getRawAxis(1));
 	}
 
 }
