@@ -1,0 +1,10 @@
+edu.wpi.first.gradlerio
+edu.wpi.first.gradlerio.frc
+edu.wpi.first.gradlerio.frc.riolog
+edu.wpi.first.gradlerio.ide
+edu.wpi.first.gradlerio.test
+edu.wpi.first.gradlerio.test.sim
+edu.wpi.first.gradlerio.wpi
+edu.wpi.first.gradlerio.wpi.dependencies
+edu.wpi.first.gradlerio.wpi.toolchain
+edu.wpi.first.gradlerio.wpi.toolchain.install
