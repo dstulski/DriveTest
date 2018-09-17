@@ -30,12 +30,12 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		rightSpeed.set(joy.getRawAxis(5));
 		leftSpeed.set(joy.getRawAxis(1));
-		r1.set(ControlMode.PercentError, rightSpeed);
-		r2.set(ControlMode.PercentError, rightSpeed);
-		r3.set(ControlMode.PercentError, rightSpeed);
-		l1.set(ControlMode.PercentError, -leftSpeed);
-		l2.set(ControlMode.PercentError, -leftSpeed);
-		l3.set(ControlMode.PercentError, -leftSpeed);
+		r1.set(ControlMode.PercentOutput, rightSpeed);
+		r2.set(ControlMode.PercentOutput, rightSpeed);
+		r3.set(ControlMode.PercentOutput, rightSpeed);
+		l1.set(ControlMode.PercentOutput, -leftSpeed);
+		l2.set(ControlMode.PercentOutput, -leftSpeed);
+		l3.set(ControlMode.PercentOutput, -leftSpeed);
 	}
 
 }
